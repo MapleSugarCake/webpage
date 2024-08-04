@@ -1,22 +1,23 @@
 module.exports = {
+  publicPath: '/webpage/',
   transpileDependencies: [
     'vuetify'
   ],
   outputDir: './docs',
-  devServer:{
-    host:'0.0.0.0',
-    proxy:{
-      "/dev":{
-        target:"http://127.0.0.1:8079",
-        changeOrigin:true,
-        pathRewrite:{
-          '^/dev':''
+  devServer: {
+    host: '0.0.0.0',
+    proxy: {
+      "/dev": {
+        target: "http://127.0.0.1:8079",
+        changeOrigin: true,
+        pathRewrite: {
+          '^/dev': ''
         }
       }
     },
   },
   productionSourceMap: false,
-  pwa:{
+  pwa: {
     iconPaths: {
       favicon32: 'favicon.ico',
       favicon16: 'favicon.ico',
